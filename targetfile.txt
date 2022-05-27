@@ -1,0 +1,413 @@
+Skip to content
+
+    Courses
+    Tutorials
+    Jobs
+    Practice
+
+    Write
+    Write
+    Come write articles for us and get featured
+    Practice
+    Practice
+    Learn and code with the best industry experts
+    Premium
+    Premium
+    Get access to ad-free content, doubt assistance and more!
+    Jobs
+    Jobs
+    Come and find your dream job with us
+        Geeks Digest
+        Quizzes
+        Geeks Campus
+        Gblog Articles
+        IDE
+        Campus Mantri
+    Sign In
+
+    Sign In
+    Home
+    Saved Videos
+    Courses
+        For Working Professionals
+        LIVE
+        Self-Paced
+        For Students
+        LIVE
+        Self-Paced
+        School Courses
+        Algorithms
+        Analysis of Algorithms
+        Data Structures
+        Interview Corner
+        Languages
+        ML & Data Science
+        CS Subjects
+        GATE
+        Web Technologies
+        Software Designs
+        School Learning
+        Mathematics
+        Maths Notes (Class 8-12)
+        NCERT Solutions
+        RD Sharma Solutions
+        Physics Notes (Class 8-11)
+        CS Exams/PSUs
+        ISRO
+        UGC NET
+        Student
+        Curated DSA Lists
+        Tutorials
+        Jobs
+        Practice 
+    GBlog
+    Puzzles
+    What's New ?
+
+    Data Structures
+    Algorithms
+    Interview Preparation
+    Topic-wise Practice
+    C++
+    Java
+    Python
+    Competitive Programming
+    Machine Learning
+    HTML
+    SDE Sheet
+    Puzzles
+    GFG School
+    Projects
+
+Related Articles
+
+    round() function in Python
+    floor() and ceil() function Python
+    Python math function | sqrt()
+    numpy.sqrt() in Python
+    numpy.square() in Python
+    numpy.sum() in Python
+    numpy.add() in Python
+    numpy.subtract() in Python
+    Python | Difference between two lists
+    Python | Check if two lists are identical
+    Python | Check if all elements in a list are identical
+    Python | Check if all elements in a List are same
+    Class method vs Static method in Python
+    Class or Static Variables in Python
+    Changing Class Members in Python
+    Constructors in Python
+    Destructors in Python
+    Inheritance in Python
+    Types of inheritance Python
+    Encapsulation in Python
+    Polymorphism in Python
+    Abstract Classes in Python
+    Defaultdict in Python
+    Python map() function
+    reduce() in Python
+    Adding new column to existing DataFrame in Pandas
+    Taking input in Python
+    How to get column names in Pandas dataframe
+    Read JSON file using Python
+
+Table of Contents
+
+    round() function in Python
+    floor() and ceil() function Python
+    Python math function | sqrt()
+    numpy.sqrt() in Python
+    numpy.square() in Python
+    numpy.sum() in Python
+    numpy.add() in Python
+    numpy.subtract() in Python
+    Python | Difference between two lists
+    Python | Check if two lists are identical
+    Python | Check if all elements in a list are identical
+    Python | Check if all elements in a List are same
+    Class method vs Static method in Python
+    Class or Static Variables in Python
+    Changing Class Members in Python
+    Constructors in Python
+    Destructors in Python
+    Inheritance in Python
+    Types of inheritance Python
+    Encapsulation in Python
+    Polymorphism in Python
+    Abstract Classes in Python
+    Defaultdict in Python
+    Python map() function
+    reduce() in Python
+    Adding new column to existing DataFrame in Pandas
+    Taking input in Python
+    How to get column names in Pandas dataframe
+    Read JSON file using Python
+
+round() function in Python
+
+    Difficulty Level : Basic
+    Last Updated : 30 Sep, 2021
+
+Python round() function float point number from the decimal value to the closest multiple of 10.
+
+The int value to the closest multiple of 10 to the power minus ndigits, where ndigits is the precision after the decimal point. If two multiples are equally close, rounding is done toward the even choice.
+Python round() Syntax: 
+
+    round(number, number of digits)
+
+Python round() parameters: 
+
+        number : number to be rounded
+        number of digits (Optional) : number of digits up to which the given number is to be rounded.
+
+If the second parameter is missing, then the round() function returns: 
+
+    if only an integer is given, for instance 15, then it will round off to 15 itself.
+    if a decimal number is given, then it will round off to the closest multiple of 10 to the power minus ndigits
+
+Python round() example:
+Example 1: Python round() function if the second parameter is missing
+
+# for integers
+print(round(15))
+ 
+# for floating point
+print(round(51.6))
+print(round(51.5))
+print(round(51.4))
+
+Output: 
+
+15
+52
+52
+51
+
+When the second parameter is present, then it returns: 
+
+The last decimal digit till which it is rounded is increased by 1 when (ndigit+1)th digit is >=5, else it stays the same.
+Example 2: Python round() function if the second parameter is present
+
+# when the (ndigit+1)th digit is =5
+print(round(2.665, 2))
+ 
+# when the (ndigit+1)th digit is >=5
+print(round(2.676, 2))
+ 
+# when the (ndigit+1)th digit is <5
+print(round(2.673, 2))
+
+Output: 
+
+2.67
+2.68
+2.67
+
+Example 3: Python round() up 
+
+print(round(12))
+print(round(12.7))
+
+Output:
+
+12
+13
+
+Example 4: Python round() down
+
+print(round(12))
+print(round(12.1))
+print(round(12.4))
+print(round(12.5))
+
+Output:
+
+12
+12
+12
+12
+
+Error and Exceptions
+
+TypeError: This error is raised in the case when there is anything other than numbers in the parameters. 
+
+print(round("a", 2))
+
+Output: 
+
+Runtime Errors:
+Traceback (most recent call last):
+  File "/home/ccdcfc451ab046030492e0e758d42461.py", line 1, in 
+    print(round("a", 2))  
+TypeError: type str doesn't define __round__ method
+
+Practical Applications: 
+
+One of the common uses of rounding of functions is Handling the mismatch between fractions and decimal. 
+
+One use of rounding numbers is to shorten all the three’s to the right of the decimal point in converting 1/3 to decimal. Most of the time, you will use the rounded numbers 0.33 or 0.333 when you need to work with 1/3 in decimal. In fact, you usually work with just two or three digits to the right of the decimal point when there is no exact equivalent to the fraction in decimal. How would you show 1/6 in decimal? Remember to round up!
+
+# practical application
+b = 1/3
+print(b)
+print(round(b, 2))
+
+Output: 
+
+0.3333333333333333
+0.33
+
+Note: In python, if we round off numbers to floor or ceil without giving the second parameter, it will return 15.0 for example and in Python 3 it returns 15, so to avoid this we can use (int) type conversion in python. It is also important to note that the round ()function shows unusual behavior when it comes to finding the mean of two numbers. 
+
+Next
+floor() and ceil() function Python
+Recommended Articles
+Page :
+Python | Pandas dataframe.round()
+22, Nov 18
+Python | Pandas Series.round()
+26, Oct 18
+Python | Pandas DatetimeIndex.round()
+24, Dec 18
+Python | Pandas TimedeltaIndex.round
+31, Dec 18
+Python | Pandas Timestamp.round
+10, Jan 19
+Python | Pandas Series.dt.round
+19, Mar 19
+Python | Numpy matrix.round()
+23, Apr 19
+Python - tensorflow.math.round()
+02, Jun 20
+Ceil and floor of the dataframe in Pandas Python – Round up and Truncate
+20, Jul 20
+Python - Round Off Dictionary Values to K decimals
+31, Jul 20
+How to Round Numbers in Python?
+17, Aug 20
+Program to calculate the Round Trip Time (RTT)
+29, May 17
+PyQt5 – Round indicator of CheckBox
+07, Apr 20
+PyQt5 - How to make Round Radio Button ?
+07, Apr 20
+Methods to Round Values in Pandas DataFrame
+15, Aug 20
+How to round elements of the NumPy array to the nearest integer?
+21, Aug 20
+How to round array elements to the given number of decimals using NumPy?
+01, Sep 20
+How to round a number in SQLAlchemy and MySQL?
+26, Feb 22
+Python - Call function from another function
+04, Dec 19
+Wand function() function in Python
+27, Apr 20
+Returning a function from a function - Python
+01, Sep 20
+wxPython - GetField() function function in wx.StatusBar
+02, Jun 20
+How to write an empty function in Python - pass statement?
+04, May 16
+Function Decorators in Python | Set 1 (Introduction)
+15, May 16
+Article Contributed By :
+https://media.geeksforgeeks.org/auth/avatar.png
+Striver
+@Striver
+Vote for difficulty
+Current difficulty : Basic
+Improved By :
+
+    gopi2708
+    akashverma4
+    kumar_satyam
+
+Article Tags :
+
+    Python-Built-in-functions
+    Python
+
+Report Issue
+
+Writing code in comment? Please use ide.geeksforgeeks.org, generate link and share the link here.
+
+What's New
+Python Programming Foundation -Self Paced Course
+View Details
+Interview Series- Prepare, Practice & Upskill
+View Details
+Data Structures & Algorithms- Self Paced Course
+View Details
+Most popular in Python
+
+    How to Install PIP on Windows ?
+    Python Dictionary
+    Read a file line by line in Python
+    Python String | replace()
+    Different ways to create Pandas Dataframe
+
+More related articles in Python
+
+    *args and **kwargs in Python
+    Python Classes and Objects
+    Check if element exists in list in Python
+    Enumerate() in Python
+    Create a Pandas DataFrame from Lists
+
+5th Floor, A-118,
+Sector-136, Noida, Uttar Pradesh - 201305
+feedback@geeksforgeeks.org
+
+    Company
+    About Us
+    Careers
+    In Media
+    Contact Us
+    Privacy Policy
+    Copyright Policy
+
+    Learn
+    Algorithms
+    Data Structures
+    SDE Cheat Sheet
+    Machine learning
+    CS Subjects
+    Video Tutorials
+
+    News
+    Top News
+    Technology
+    Work & Career
+    Business
+    Finance
+    Lifestyle
+
+    Languages
+    Python
+    Java
+    CPP
+    Golang
+    C#
+    SQL
+
+    Web Development
+    Web Tutorials
+    Django Tutorial
+    HTML
+    CSS
+    JavaScript
+    Bootstrap
+
+    Contribute
+    Write an Article
+    Improve an Article
+    Pick Topics to Write
+    Write Interview Experience
+    Internships
+    Video Internship
+
+@geeksforgeeks , Some rights reserved
+We use cookies to ensure you have the best browsing experience on our website. By using our site, you acknowledge that you have read and understood our Cookie Policy & Privacy Policy
+Lightbox
+Start Your Coding Journey Now!
